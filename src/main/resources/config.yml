@@ -1,0 +1,70 @@
+database:
+  # 'sqlite' or 'mysql'
+  type: sqlite
+  sqlite:
+    file: auctionhouse.db
+  mysql:
+    host: localhost
+    port: 3306
+    database: auctionhouse
+    username: root
+    password: ''
+    pool-size: 10
+
+listings:
+  default-duration-hours: 48
+  max-active-per-player: 10
+  # Grant higher listing limits to players with specific permissions.
+  # All matching permissions are evaluated and the highest limit wins.
+  # Use -1 for unlimited. Leave empty to disable.
+  # The key is the exact permission node, so custom names are supported.
+  permission-limits:
+    unrealauctions.listinglimit.25: 25
+    unrealauctions.listinglimit.50: 50
+    unrealauctions.listinglimit.100: 100
+    unrealauctions.listinglimit.unlimited: -1
+  min-price: 1
+  max-price: 1000000000
+  listing-fee-percent: 2.5
+  cancel-fee-percent: 0.0
+  # How many days items stay in the collection/expired box before being deleted
+  collection-box-expiry-days: 7
+  blacklist:
+    - BEDROCK
+    - COMMAND_BLOCK
+    - BARRIER
+    - DEBUG_STICK
+    - STRUCTURE_BLOCK
+    - STRUCTURE_VOID
+
+orders:
+  # Item orders: a player requests items and pays whoever supplies them.
+  # The offer is escrowed when the order is created and refunded if it is
+  # cancelled or expires. Price bounds reuse listings.min-price / max-price.
+  enabled: true
+  max-open-per-player: 5
+  # Grant higher open-order limits to players with specific permissions.
+  # All matching permissions are evaluated and the highest limit wins.
+  # Use -1 for unlimited. Leave empty to disable.
+  # The key is the exact permission node, so custom names are supported.
+  permission-limits:
+    unrealauctions.orderlimit.10: 10
+    unrealauctions.orderlimit.25: 25
+    unrealauctions.orderlimit.unlimited: -1
+  duration-hours: 48
+  max-quantity: 2304
+
+queue:
+  max-depth: 500
+
+rate-limits:
+  listings-per-minute: 5
+  purchases-per-minute: 20
+  listing-cooldown-seconds: 10
+
+gui:
+  items-per-page: 45
+  refresh-interval-seconds: 30
+
+economy:
+  currency-symbol: '$'
