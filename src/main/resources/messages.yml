@@ -1,0 +1,117 @@
+prefix: '&8[&6UA&8] &r'
+
+# Listing
+listing-created: '&aItem listed for &6{price}&a. Fee charged: &6{fee}&a.'
+listing-cancelled: '&aListing cancelled. Item moved to your collection box.'
+listing-expired: '&eYour listing for &6{item}&e has expired and is in your collection box.'
+max-listings: '&cYou have reached the maximum of &6{max}&c active listings.'
+blacklisted-item: '&cThis item cannot be listed on the auction house.'
+min-price: '&cMinimum price is &6{min}&c.'
+max-price: '&cMaximum price is &6{max}&c.'
+no-item-in-hand: '&cYou must hold the item you want to sell.'
+cannot-sell-air: '&cYou cannot sell air.'
+invalid-sell-amount: '&cAmount must be between &61&c and &6{max}&c for the held stack.'
+
+# Buying
+item-purchased: '&aYou purchased &6{item}&a for &6{price}&a.'
+listing-not-found: '&cThis listing is no longer available.'
+listing-expired-buy: '&cThis listing has expired.'
+cannot-buy-own: '&cYou cannot purchase your own listing.'
+not-enough-funds: '&cYou do not have enough funds (&6{price}&c required).'
+
+# Collection
+item-collected: '&aItem collected to your inventory.'
+collection-box-empty: '&eYour collection box is empty.'
+inventory-full: '&cYour inventory is full! Free up some space first.'
+
+# Orders
+order-created: '&aOrder created: &6{quantity}x {item} &afor &6{price}&a. Payment is held until it is filled.'
+order-fulfilled: '&aYou filled an order and earned &6{price}&a.'
+order-filled-notify: '&aYour order for &6{quantity}x {item} &awas filled! Items are in your collection box.'
+order-cancelled: '&aOrder cancelled. Your &6{price}&a has been refunded.'
+order-expired: '&eYour order for &6{quantity}x {item} &eexpired. &6{price}&e was refunded.'
+order-not-found: '&cThis order is no longer available.'
+order-expired-fulfil: '&cThis order has expired.'
+cannot-fulfil-own: '&cYou cannot fill your own order.'
+max-orders: '&cYou have reached the maximum of &6{max}&c open orders.'
+order-missing-items: '&cYou do not have &6{quantity}x {item}&c to fill this order.'
+orders-disabled: '&cItem orders are currently disabled.'
+
+# Order creation prompts
+prompt-item-quantity: '&e▶ &6Click here&e to pick the item, then press TAB to browse every item.'
+prompt-price: '&e▶ &6Type your offer in chat&e, or type &6cancel&e to abort.'
+order-input-cancelled: '&7Offer input cancelled.'
+invalid-item: '&cUnknown item &6{input}&c. Press TAB while typing to see the full list.'
+invalid-quantity: '&cQuantity must be between &61&c and &6{max}&c.'
+no-active-order: '&cYou have no order open. Use &6/ah orders&c and click &6Create an Order&c first.'
+order-incomplete: '&cSet both the item and your offer before confirming.'
+
+# General
+no-permission: '&cYou do not have permission to do that.'
+queue-full: '&cThe server is busy. Please try again in a moment.'
+cooldown: '&cPlease wait &6{seconds}s&c before listing again.'
+rate-limit-listings: '&cYou are listing items too fast. Please slow down.'
+rate-limit-purchases: '&cYou are buying items too fast. Please slow down.'
+internal-error: '&cAn internal error occurred. Please try again.'
+db-unavailable: '&cThe auction house is temporarily unavailable. Please try again shortly.'
+invalid-price: '&cInvalid price. Please enter a positive number.'
+player-only: '&cThis command can only be used by players.'
+unknown-subcommand: '&cUnknown subcommand. Use &6/ah help&c for usage.'
+
+# Admin
+admin-stats: '&6Queue depth: &a{queue} &6| Active listings: &a{listings} &6| DB type: &a{db}'
+admin-reloaded: '&aConfiguration reloaded successfully.'
+
+# GUI titles
+gui-browse-title: '&8Auction House &7- Page {page}/{total}'
+gui-my-listings-title: '&8My Listings &7- Page {page}/{total}'
+gui-collection-box-title: '&8Collection Box &7- Page {page}/{total}'
+gui-expired-box-title: '&8Expired Items &7- Page {page}/{total}'
+gui-listing-confirm-title: '&8Confirm Listing'
+gui-buy-confirm-title: '&8Confirm Purchase'
+gui-orders-title: '&8Item Orders &7- Page {page}/{total}'
+gui-my-orders-title: '&8My Orders &7- Page {page}/{total}'
+gui-order-create-title: '&8Create Item Order'
+gui-order-fulfil-title: '&8Fill Order'
+
+# GUI buttons
+btn-prev-page: '&7◄ Previous Page'
+btn-next-page: '&7Next Page ►'
+btn-my-listings: '&eYour Listings'
+btn-collection-box: '&eCollection Box'
+btn-sort: '&eSorted by: &6{sort}'
+btn-filter: '&eFilter: &6{filter}'
+btn-player-name: '&f&l{name}'
+btn-return: '&7◄ Return'
+btn-player-balance: '&7Balance: &a{balance}'
+btn-confirm: '&aConfirm'
+btn-cancel: '&cCancel'
+btn-close: '&7Close'
+btn-orders: '&eItem Orders'
+btn-my-orders: '&eYour Orders'
+btn-create-order: '&aCreate an Order'
+btn-set-item: '&eSet Item &7(click)'
+btn-set-price: '&eSet Your Offer &7(click)'
+btn-order-confirm: '&aCreate Order'
+
+# Listing lore
+lore-seller: '&7Seller: &f{seller}'
+lore-price: '&7Price: &a{price}'
+lore-time-left: '&7Expires in: &e{time}'
+lore-left-click-buy: '&aLeft-click &7to purchase'
+lore-right-click-cancel: '&cRight-click &7to cancel listing'
+lore-source-purchase: '&7Source: &aPurchased'
+lore-source-cancelled: '&7Source: &eCancelled listing'
+lore-source-expired: '&7Source: &cExpired listing'
+lore-source-order: '&7Source: &bFilled order'
+lore-expires-in: '&7Expires in: &c{time}'
+lore-click-collect: '&aClick &7to collect'
+
+# Order lore
+lore-order-by: '&7Requested by: &f{player}'
+lore-order-quantity: '&7Wants: &f{quantity}x'
+lore-order-offer: '&7Offering: &a{price}'
+lore-order-not-set: '&8Not set'
+lore-click-fulfil: '&aLeft-click &7to fill this order'
+lore-right-click-cancel-order: '&cRight-click &7to cancel order'
+lore-order-need-items: '&cYou need {quantity}x {item}'

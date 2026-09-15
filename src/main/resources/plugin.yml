@@ -1,0 +1,28 @@
+name: UnrealAuctions
+version: '${project.version}'
+main: it.thatsade.unrealauctions.UnrealAuctionsPlugin
+api-version: '1.21'
+description: A secure, queue-based auction house for players to buy and sell items.
+authors:
+  - thatsade
+depend:
+  - Vault
+
+permissions:
+  unrealauctions.use:
+    description: Allows use of the auction house
+    default: true
+  unrealauctions.orders:
+    description: Allows creating and filling item orders
+    default: true
+  unrealauctions.admin:
+    description: Allows admin commands
+    default: op
+
+commands:
+  ah:
+    description: Open the UnrealAuctions market
+    usage: /ah [sell <price> [amount]|collect|cancel|orders|order <item> [amount]|orderprice <amount>|admin <stats|reload>]
+    permission: unrealauctions.use
+    aliases:
+      - unrealauctions
